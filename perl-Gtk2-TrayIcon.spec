@@ -1,21 +1,24 @@
 %define module TrayIcon
 
-Summary: Perl module interface to the EggTrayIcon library
 Name:    perl-Gtk2-%module
-Version: 0.04
-Release: %mkrel 8
+Version: 0.06
+Release: %mkrel 1
+Summary: Perl module interface to the EggTrayIcon library
 License: GPL or Artistic
 Group:   Development/GNOME and GTK+
+URL:     http://gtk2-perl.sf.net/
 Source:  Gtk2-%module-%version.tar.bz2
-# (fc) 0.04-3mdk fix transparency in KDE notification area
-Patch0: Gtk2-TrayIcon-0.04-transparency.patch
-URL: http://gtk2-perl.sf.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: gtk+2-devel perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig perl-Glib >= 0.92
+BuildRequires: gtk+2-devel
+BuildRequires: perl-devel
+BuildRequires: perl-ExtUtils-Depends
+BuildRequires: perl-ExtUtils-PkgConfig
+BuildRequires: perl-Glib >= 0.92
 BuildRequires: perl-Gtk2
 BuildRequires: glitz-devel
 BuildRequires: perl-Cairo
-Requires: gtk+2 perl-Gtk2 >= 0.95-6mdk
+Requires: gtk+2
+Requires: perl-Gtk2 >= 0.95-6mdk
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 This module allows a Perl developer to embed an arbitrary widget
@@ -24,22 +27,21 @@ System Trays are found in both KDE and Gnome.
 
 %prep
 %setup -q -n Gtk2-%module-%version
-%patch0 -p1 -b .transparency
 find -type d -name CVS | rm -rf 
-perl Makefile.PL INSTALLDIRS=vendor
 
 %build
+perl Makefile.PL INSTALLDIRS=vendor
 %make OPTIMIZE="$RPM_OPT_FLAGS"
 
 #%check
 #%make test || :
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)
