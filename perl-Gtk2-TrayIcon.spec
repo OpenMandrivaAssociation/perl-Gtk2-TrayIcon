@@ -18,7 +18,6 @@ BuildRequires: glitz-devel
 BuildRequires: perl-Cairo
 Requires: gtk+2
 Requires: perl-Gtk2 >= 0.95-6mdk
-BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 This module allows a Perl developer to embed an arbitrary widget
