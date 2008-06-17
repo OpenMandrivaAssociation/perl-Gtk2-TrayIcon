@@ -2,7 +2,7 @@
 
 Name:    perl-Gtk2-%module
 Version: 0.06
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: Perl module interface to the EggTrayIcon library
 License: GPL or Artistic
 Group:   Development/GNOME and GTK+
