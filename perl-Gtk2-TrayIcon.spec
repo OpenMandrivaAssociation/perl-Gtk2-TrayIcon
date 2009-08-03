@@ -1,24 +1,28 @@
-%define module TrayIcon
+%define upstream_name    Gtk2-TrayIcon
+%define upstream_version 0.06
 
-Name:    perl-Gtk2-%module
-Version: 0.06
-Release: %mkrel 3
-Summary: Perl module interface to the EggTrayIcon library
-License: GPL or Artistic
-Group:   Development/GNOME and GTK+
-URL:     http://gtk2-perl.sf.net/
-Source:  Gtk2-%module-%version.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl module interface to the EggTrayIcon library
+License:    GPL+ or Artistic
+Group:      Development/GNOME and GTK+
+Url:        http://gtk2-perl.sf.net/
+Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires: glitz-devel
 BuildRequires: gtk+2-devel
-BuildRequires: perl-devel
+BuildRequires: perl-Cairo
 BuildRequires: perl-ExtUtils-Depends
 BuildRequires: perl-ExtUtils-PkgConfig
 BuildRequires: perl-Glib >= 0.92
 BuildRequires: perl-Gtk2
-BuildRequires: glitz-devel
-BuildRequires: perl-Cairo
+BuildRequires: perl-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires: gtk+2
 Requires: perl-Gtk2 >= 0.95-6mdk
-BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 This module allows a Perl developer to embed an arbitrary widget
@@ -26,7 +30,7 @@ in a System Tray like the Gnome notification area.
 System Trays are found in both KDE and Gnome.
 
 %prep
-%setup -q -n Gtk2-%module-%version
+%setup -q -n %{upstream_name}-%{upstream_version}
 find -type d -name CVS | rm -rf 
 
 %build
@@ -49,4 +53,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorarch}/Gtk2
 %{perl_vendorarch}/auto/*
-
