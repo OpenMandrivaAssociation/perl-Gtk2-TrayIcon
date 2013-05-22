@@ -12,7 +12,7 @@ Url:        http://gtk2-perl.sf.net/
 Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires: glitz-devel
-BuildRequires: gtk+2-devel
+BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: perl-Cairo
 BuildRequires: perl(ExtUtils::Depends)
 BuildRequires: perl-ExtUtils-PkgConfig
