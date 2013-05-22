@@ -14,7 +14,7 @@ Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
 BuildRequires: glitz-devel
 BuildRequires: gtk+2-devel
 BuildRequires: perl-Cairo
-BuildRequires: perl-ExtUtils-Depends
+BuildRequires: perl(ExtUtils::Depends)
 BuildRequires: perl-ExtUtils-PkgConfig
 BuildRequires: perl-Glib >= 0.92
 BuildRequires: perl-Gtk2
@@ -56,7 +56,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.60.0-7
+* Wed Jan 25 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 0.60.0-7
 + Revision: 768358
 - svn commit -m mass rebuild of perl extension against perl 5.14.2
 
@@ -76,7 +76,7 @@ rm -rf %{buildroot}
 + Revision: 564517
 - rebuild for perl 5.12.1
 
-* Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2011.0
+* Mon Aug 03 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.60.0-1mdv2011.0
 + Revision: 408464
 - rebuild using %%perl_convert_version
 
@@ -113,13 +113,13 @@ rm -rf %{buildroot}
 * Wed Mar 01 2006 Frederic Crozat <fcrozat@mandriva.com> 0.04-5mdk
 - Patch0 (danw): Fix tray icon transparency in KDE notification area
 
-* Fri Dec 23 2005 Nicolas L�cureuil <neoclust@mandriva.org> 0.04-4mdk
+* Fri Dec 23 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.04-4mdk
 - Fix Buildrequires
 
-* Mon Oct 03 2005 Nicolas L�cureuil <neoclust@mandriva.org> 0.04-3mdk
+* Mon Oct 03 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.04-3mdk
 - Fix BuildRequires
 
-* Mon Nov 15 2004 G�tz Waschk <waschk@linux-mandrake.com> 0.04-2mdk
+* Mon Nov 15 2004 Götz Waschk <waschk@linux-mandrake.com> 0.04-2mdk
 - rebuild for new perl
 
 * Mon Apr 05 2004 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.04-1mdk
