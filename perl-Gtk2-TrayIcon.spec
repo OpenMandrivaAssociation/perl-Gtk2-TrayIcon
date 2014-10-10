@@ -9,6 +9,7 @@ License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Url:		http://gtk2-perl.sf.net/
 Source0:	%{modname}-%{modver}.tar.bz2
+Source100:	%{name}.rpmlintrc
 BuildRequires:	perl-Cairo
 BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl-ExtUtils-PkgConfig
