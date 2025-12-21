@@ -10,6 +10,7 @@ Group:		Development/GNOME and GTK+
 Url:		https://gtk2-perl.sf.net/
 Source0:	%{modname}-%{modver}.tar.bz2
 Source100:	%{name}.rpmlintrc
+BuildRequires:	make
 BuildRequires:	perl-Cairo
 BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl-ExtUtils-PkgConfig
