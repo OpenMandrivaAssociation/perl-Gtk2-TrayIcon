@@ -1,14 +1,14 @@
 %define modname	Gtk2-TrayIcon
-%define modver	0.06
+%define modver	0.07
 
 Summary:	Perl module interface to the EggTrayIcon library
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	20
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Url:		https://gtk2-perl.sf.net/
-Source0:	%{modname}-%{modver}.tar.bz2
+Source0:	https://cpan.metacpan.org/authors/id/X/XA/XAOC/Gtk2-TrayIcon-%{modver}.tar.gz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	make
 BuildRequires:	perl-Cairo
