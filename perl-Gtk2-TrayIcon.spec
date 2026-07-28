@@ -4,7 +4,7 @@
 Summary:	Perl module interface to the EggTrayIcon library
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Url:		https://gtk2-perl.sf.net/
